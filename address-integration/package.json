@@ -1,0 +1,23 @@
+{
+  "name": "address-integration",
+  "version": "1.0.0",
+  "description": "Boilerplate for creating an integration with an address verification API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikwlarsen/address-integration.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikwlarsen/address-integration/issues"
+  },
+  "homepage": "https://github.com/erikwlarsen/address-integration#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "request": "^2.88.0"
+  }
+}
