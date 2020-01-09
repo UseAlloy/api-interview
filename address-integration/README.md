@@ -11,8 +11,11 @@ Use Lob to verify incoming address data. The data will come in the following `JS
   "address_country_code": "USA"
 }
 ```
+Your code should take a `JSON` object in the above format, send the data to Lob in the format Lob expects, and return the Lob-improved data in the same format as the input.
 
 This repo comes with the HTTP request library `request` pre-installed. Feel free to add any other dependencies as needed.
+
+You'll need to add a `.env` file in the root directory with a `LOB_KEY` environment variable in order to make requests to Lob. Your interviewers will provide you with this (you might need to remind them though).
 
 Lob API documentation: https://lob.com/docs
 
