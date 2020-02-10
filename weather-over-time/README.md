@@ -90,6 +90,7 @@ Your API may look something like this:
 ```
 
 # Tasks
+Think of steps 1 and 2 as the MVP -- they're the most important to get done, so it's totally ok if most or all of your time is spent on them.
 1. Implement the `mapsApi.getDirections` function. This should simply make a request to the maps API of your choice and retrieve the appropriate directions, given user input.
 2. Implement the `connectors.transformDirectionsToWeatherPoints` helper function. The purpose of this function is to take the output of the maps API and transform it into something that our `weatherApi.getTripWeather` function can deal with. Your transformation should use the `interval` input to return an array of lat/lon points with times that describe the user's location at evenly spaced intervals. For the time being you can assume that the user is planning to leave immediately (i.e. the first point in the returned array should have the current time).
 3. Now we've implemented everything for our MVP, but there seems to be a bug. Can you debug what's going wrong?
