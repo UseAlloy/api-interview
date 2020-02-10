@@ -26,8 +26,7 @@ Your API may look something like this:
       "postcode": "11226",
       "country": "United States of America",
       "weather": {
-        "time": 1557196612,
-        "summary": "Mostly Cloudy"
+        "summary": "Mostly Cloudy",
         "precipProbability": 0,
         "temperature": 55.36,
       }
@@ -41,7 +40,6 @@ Your API may look something like this:
       "postcode": "10025",
       "country": "United States of America",
       "weather": {
-        "time": 1557200212,
         "summary": "Mostly Cloudy",
         "precipProbability": 0,
         "temperature": 55.73,
@@ -56,10 +54,8 @@ Your API may look something like this:
       "postcode": "10701",
       "country": "United States of America",
       "weather": {
-        "time": 1557203812,
         "summary": "Partly Cloudy",
         "precipProbability": 0.02,
-        "precipType": "rain",
         "temperature": 53.73,
       }
     },
@@ -71,10 +67,8 @@ Your API may look something like this:
       "postcode": "10532",
       "country": "United States of America",
       "weather": {
-        "time": 1557207412,
         "summary": "Partly Cloudy",
         "precipProbability": 0.01,
-        "precipType": "rain",
         "temperature": 52.05,
       }
     },
@@ -86,10 +80,8 @@ Your API may look something like this:
       "postcode": "10598",
       "country": "United States of America",
       "weather": {
-        "time": 1557211012,
         "summary": "Partly Cloudy",
         "precipProbability": 0.01,
-        "precipType": "rain",
         "temperature": 51.15,
       }
     }
