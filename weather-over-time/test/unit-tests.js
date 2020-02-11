@@ -10,7 +10,7 @@ describe('Unit tests', () => {
       'request-promise': () => Promise.resolve({ currently: weatherCurrently }),
     };
 
-    const apiKey = process.env.WEATHER_API_KEY;
+    const apiKey = process.env.DARKSKY_API_KEY;
     const lat = '43.2066';
     const lon = '-94.8728';
     const time = 1581360637;

@@ -1,6 +1,5 @@
-require('dotenv').config();
 const request = require('request-promise');
-const key = process.env.WEATHER_API_KEY;
+const key = process.env.DARKSKY_API_KEY;
 const baseUrl = `https://api.darksky.net/forecast/${key}`;
 
 /**

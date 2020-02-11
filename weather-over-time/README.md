@@ -6,7 +6,7 @@ I like to take long bike rides, and I like to know the weather ahead of time. Bu
 
 Candidates will create an API endpoint which takes in a start and end location (ideally something which can be "geocoded"), and a mode of transportation (e.g. `car`, `bicycle`, or `walking`) and returns an hourly (or optionally custom interval) weather forecast which includes, at minimum, the temperature, percent chance precipitation, and location (latitude and longitude) at each hour (or custom interval).
 
-We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a list of locations and times. It will be up to you to get directions data from a maps API (Google Maps, MapQuest, or similar) and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you. You may encounter a bug in the existing code along the way!
+We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a list of locations and times. It will be up to you to get directions data from the MapQuest API and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you. You may encounter a bug in the existing code along the way!
 
 Your API may look something like this:
 ### Request:
@@ -89,7 +89,7 @@ Your API may look something like this:
 
 # Tasks
 Think of steps 1 and 2 as the MVP -- they're the most important to get done, so it's totally ok if most or all of your time is spent on them.
-1. Implement the `mapsApi.getDirections` function. This should simply make a request to the maps API of your choice and retrieve the appropriate directions, given user input.
+1. Implement the `mapsApi.getDirections` function. This should simply make a request to the MapQuest API and retrieve the appropriate directions, given user input ([MapQuest Directions API Docs](https://developer.mapquest.com/documentation/directions-api/)).
 2. Implement the `connectors.transformDirectionsToWeatherPoints` helper function. The purpose of this function is to take the output of the maps API and transform it into something that our `weatherApi.getTripWeather` function can deal with. Your transformation should use the `interval` input to return an array of lat/lon points with times that describe the user's location at evenly spaced intervals. For the time being you can assume that the user is planning to leave immediately (i.e. the first point in the returned array should have the current time).
 3. Now we've implemented everything for our MVP, but there seems to be a bug. Can you debug what's going wrong?
 4. We've got a failing test and an unimplemented test. Let's get all our tests running and passing.
