@@ -1,14 +1,12 @@
 # Introduction
 
-I like to take long bike rides, and I like to know the weather ahead of time.  But my bike rides often take me 60+ miles away from home, and last over many hours!  I can check the weather forecast in the morning at my origin point, but what about in the afternoon?  By that time I'll likely have covered some distance and the weather at Bear Mountain isn't necessarily going to be the same weather in Brooklyn.  What about midway through?  What will the weather be like in Nyack, NY when I roll through for my coffee break?
-
-Ideally what I'd like is an hourly weather forecast which accounts for the fact that I will have travelled an incremental distance throughout the day.
+I like to take long bike rides, and I like to know the weather ahead of time. But my bike rides often take me 60+ miles away from home, and last over many hours! I can check the weather forecast in the morning at my origin point, but what about in the afternoon? Ideally what I'd like is an hourly weather forecast which accounts for the fact that I will have travelled an incremental distance throughout the day.
 
 # Objective
 
-Candidates will create an API endpoint which takes in a start and end location (ideally something which can be "geocoded"), and optionally a mode of transportation (e.g. `car`, `bicycle`, or `walking`) and returns an hourly (or optionally custom interval) weather forecast which includes, at minimum, the temperature, percent chance precipitation, and location (latitude and longitude) at each hour (or custom interval).
+Candidates will create an API endpoint which takes in a start and end location (ideally something which can be "geocoded"), and a mode of transportation (e.g. `car`, `bicycle`, or `walking`) and returns an hourly (or optionally custom interval) weather forecast which includes, at minimum, the temperature, percent chance precipitation, and location (latitude and longitude) at each hour (or custom interval).
 
-We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a given location and time. It will be up to you to get directions data from a maps API (Google Maps, MapQuest, or similar) and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you. You may encounter a bug in the existing code along the way!
+We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a list of locations and times. It will be up to you to get directions data from a maps API (Google Maps, MapQuest, or similar) and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you. You may encounter a bug in the existing code along the way!
 
 Your API may look something like this:
 ### Request:
