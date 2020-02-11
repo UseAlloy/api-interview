@@ -11,7 +11,7 @@ const baseUrl = `https://api.darksky.net/forecast/${key}`;
  */
 const getWeatherAtTime = async (lat, lon, time) => {
   return request(`${baseUrl}/${lat},${lon},${time}`, { json: true });
-}
+};
 
 /**
  * Given an array of lat/lon/time points, returns the weather data from the DarkSky API for each point
@@ -22,6 +22,6 @@ const getTripWeather = (points) => {
     const resp = await getWeatherAtTime(point.lat, point.lon, point.time);
     return { ...point, ...resp.currently };
   }));
-}
+};
 
 module.exports = { getWeatherAtTime, getTripWeather };
