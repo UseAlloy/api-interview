@@ -18,7 +18,7 @@ const getWeatherAtTime = async (lat, lon, time) => {
  */
 const getTripWeather = (points) => {
   return Promise.all(points.map(async (point) => {
-    const resp = await getWeatherAtTime(point.lat, point.lon, point.time);
+    const resp = await getWeatherAtTime(point.lat, point.long, point.time);
     return { ...point, ...resp.currently };
   }));
 };

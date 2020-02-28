@@ -27,12 +27,15 @@ router.get('/route-weather', async (ctx, next) => {
      */
     const directions = await mapsApi.getDirections(start, end, mode);
     const weatherPoints = connectors.transformDirectionsToWeatherPoints(directions, interval);
+
     /**
      * The two functions below are already implemented.
      */
     const weatherPointsWithMappedTimes = connectors.mapWeatherPointTimes(weatherPoints);
     const tripForecast = await weatherApi.getTripWeather(weatherPointsWithMappedTimes);
-    ctx.body.forecast = tripForecast;
+    ctx.body = {
+      forecast: tripForecast
+    };
   } catch (err) {
     console.error('Error processing request', err);
     ctx.throw(500, 'Server error');
