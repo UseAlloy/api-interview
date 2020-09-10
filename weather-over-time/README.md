@@ -4,9 +4,9 @@ I like to take long bike rides, and I like to know the weather ahead of time. Bu
 
 # Objective
 
-Candidates will create an API endpoint which takes in a start and end location (ideally something which can be "geocoded"), and a mode of transportation (e.g. `car`, `bicycle`, or `walking`) and returns an hourly (or optionally custom interval) weather forecast which includes, at minimum, the temperature, percent chance precipitation, and location (latitude and longitude) at each hour (or custom interval).
+Candidates will create an API endpoint which takes in a start and end location, and a mode of transportation (e.g. `car`, `bicycle`, or `walking`) and returns an hourly weather forecast which includes the temperature, percent chance precipitation, and location (latitude and longitude) at each hour.
 
-We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a list of locations and times. It will be up to you to get directions data from the MapQuest API and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you. You may encounter a bug in the existing code along the way!
+We've already set up a connection with the DarkSky API for weather and created a function that retrieves weather data for a list of locations and times. It will be up to you to get directions data from the MapQuest API and wrangle those directions into something that we can get the weather for. Exactly how the API response looks will be up to you.
 
 Your API may look something like this:
 ### Request:
@@ -19,10 +19,6 @@ Your API may look something like this:
       "lng": -73.949371,
       "lat": 40.648922,
       "time": 1557196612,
-      "city": "NYC",
-      "state": "New York",
-      "postcode": "11226",
-      "country": "United States of America",
       "weather": {
         "summary": "Mostly Cloudy",
         "precipProbability": 0,
@@ -30,27 +26,9 @@ Your API may look something like this:
       }
     },
     {
-      "lng": -73.97274328005592,
-      "lat": 40.791933868592736,
-      "time": 1557200212,
-      "city": "NYC",
-      "state": "New York",
-      "postcode": "10025",
-      "country": "United States of America",
-      "weather": {
-        "summary": "Mostly Cloudy",
-        "precipProbability": 0,
-        "temperature": 55.73,
-      }
-    },
-    {
       "lng": -73.87215712846864,
       "lat": 40.94276710996917,
       "time": 1557203812,
-      "city": "Yonkers",
-      "state": "New York",
-      "postcode": "10701",
-      "country": "United States of America",
       "weather": {
         "summary": "Partly Cloudy",
         "precipProbability": 0.02,
@@ -58,25 +36,9 @@ Your API may look something like this:
       }
     },
     {
-      "lng": -73.82096421291052,
-      "lat": 41.12169586126841,
-      "time": 1557207412,
-      "state": "New York",
-      "postcode": "10532",
-      "country": "United States of America",
-      "weather": {
-        "summary": "Partly Cloudy",
-        "precipProbability": 0.01,
-        "temperature": 52.05,
-      }
-    },
-    {
       "lng": -73.76151578011472,
       "lat": 41.31119424665392,
       "time": 1557211012,
-      "state": "New York",
-      "postcode": "10598",
-      "country": "United States of America",
       "weather": {
         "summary": "Partly Cloudy",
         "precipProbability": 0.01,
@@ -85,6 +47,16 @@ Your API may look something like this:
     }
   ]
 }
+```
+
+# Setup
+1. Clone the `api-interview` repo to your computer.
+2. Navigate to the `weather-over-time` directory and add a `.env` file with credentials provided by your interviewer.
+3. Run the following:
+```sh
+npm install          # installs the dependencies
+npm test             # tests will fail, that's ok
+npm run start-dev    # starts the server in development mode
 ```
 
 # Tasks
