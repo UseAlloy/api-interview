@@ -63,8 +63,7 @@ npm run start-dev    # starts the server in development mode
 Think of steps 1 and 2 as the MVP -- they're the most important to get done, so it's totally ok if most or all of your time is spent on them.
 1. Implement the `mapsApi.getDirections` function. This should simply make a request to the MapQuest API and retrieve the appropriate directions, given user input ([MapQuest Directions API Docs](https://developer.mapquest.com/documentation/directions-api/)).
 2. Implement the `connectors.transformDirectionsToWeatherPoints` helper function. The purpose of this function is to take the output of the maps API and transform it into something that our `weatherApi.getTripWeather` function can deal with. Your transformation should use the `interval` input to return an array of lat/lon points with times that describe the user's location at evenly spaced intervals. For the time being you can assume that the user is planning to leave immediately (i.e. the first point in the returned array should have the current time).
-3. Now we've implemented everything for our MVP, but there seems to be a bug. Can you debug what's going wrong?
-4. We've got a failing test and an unimplemented test. Let's get all our tests running and passing.
-5. Let's add some more features! First, allow users to specify the time interval of weather reports that they want to receive from the API.
-6. Now, let's let users start the trip at some point in the future instead of right now.
-7. Finally, let's implement any transport methods that we don't have yet out of 'bicycle', 'walking', and 'car'.
+3. We've got a failing test and an unimplemented test. Let's get all our tests running and passing.
+4. Let's add some more features! First, allow users to specify the time interval of weather reports that they want to receive from the API.
+5. Now, let's let users start the trip at some point in the future instead of right now.
+6. Finally, let's implement any transport methods that we don't have yet out of 'bicycle', 'walking', and 'car'.

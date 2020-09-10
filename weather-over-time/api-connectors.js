@@ -1,9 +1,9 @@
-const mapDatetimeToMs = datetime => new Date(datetime).getTime();
+const mapDatetimeToSeconds = datetime => Math.floor(new Date(datetime).getTime() / 1000);
 
 const mapWeatherPointTimes = (weatherPoints) => {
   return weatherPoints.map(point => ({
     ...point,
-    time: mapDatetimeToMs(point.time),
+    time: mapDatetimeToSeconds(point.time),
   }));
 };
 
