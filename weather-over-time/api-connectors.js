@@ -12,5 +12,5 @@ const transformDirectionsToWeatherPoints = (directions, interval) => {};
 module.exports = {
   transformDirectionsToWeatherPoints,
   mapWeatherPointTimes,
-  mapDatetimeToMs,
+  mapDatetimeToSeconds,
 };

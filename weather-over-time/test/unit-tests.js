@@ -54,9 +54,9 @@ describe('Unit tests', () => {
 
   describe('api-connectors', () => {
     const connectors = require('../api-connectors');
-    it('`mapDatetimeToMs` should map datetime to ms since UNIX epoch', () => {
+    it('`mapDatetimeToSeconds` should map datetime to ms since UNIX epoch', () => {
       const datetime = '2020-02-10T20:26:32.624Z';
-      assert.equal(connectors.mapDatetimeToMs(datetime), 1581366392624);
+      assert.equal(connectors.mapDatetimeToSeconds(datetime), 1581366392);
     });
 
     xit('`transformDirectionsToWeatherPoints` should transform directions into lat/lon points with times that match the interval');
