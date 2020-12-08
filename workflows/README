@@ -1,0 +1,53 @@
+PM Spec:
+Our workflows are designed by our clients. They are essentially a collection of
+actions we take with our vendors.  Some actions are very expensive, so we only
+make them if we have to.
+
+You will receive an array of strings. Each string is a set of comma separated 
+values.  The first value of each is an action to be run, that must happen AFTER
+each of the rest of the values in the string. 
+
+The expected output is a list of actions in an acceptable order.
+
+Basic example input/output:
+
+input = [
+	"travel,dress,eat",
+	"dress,shower"
+]
+
+Drawn out, it would look like:
++------------+     +------------+
+|            |     |            |
+|   shower   |---->|   dress    |     +------------+            
+|            |     |            |---->|            |
++------------+     +------------+     |            |
+                                      |   travel   |
+                   +------------+     |            |
+                   |            |---->|            |
+                   |    eat     |     +------------+            
+                   |            |
+                   +------------+
+
+valid output order:
+shower
+dress
+eat
+travel
+
+an alternative valid output:
+shower
+eat
+dress
+travel
+
+How would you implement this?
+
+Lets try it with this a more realistic second dataset: Does it still work?
+
+input = [
+  "Address,Name",
+  "IPAddress,Address",
+  "Passport,SocialSecurityNumber,DateOfBirth",
+  "Email,Passport,DateOfBirth",
+]
